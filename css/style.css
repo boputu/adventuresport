@@ -55,6 +55,12 @@ body a{
  #nav .current a {
 	 color:red;
 }
+
+#map {
+ height: 400px;
+ width: 100%;
+}
+
 .toggleMenu {
     display:  none;
   	padding:4px 5px 0px 5px;
@@ -1269,6 +1275,8 @@ p.m_8{
 	border: none;
 	cursor: pointer;
 	outline:none;
+	width: 570px;
+	border-radius: 20px;
 }
 .form-submit input[type="submit"]:hover {
 	background:#333;

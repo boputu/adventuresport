@@ -57,20 +57,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7">
-				  <div class="map">
-					<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265&amp;output=embed"></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color:#666;text-align:left;font-size:12px"></a></small>
-				  </div>
+          <div id="map"></div>
+          <script>
+            function initMap() {
+              var mapita = {lat: 39.3935163, lng: -0.4115861};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                center: mapita
+              });
+              var marker = new google.maps.Marker({
+                position: mapita,
+                map: map
+              });
+            }
+          </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGCAKLqlvpZJbYDtFrKJ_GzG3JTjRss7o&callback=initMap">
+          </script>
 				</div>
 				<div class="col-md-5">
-					<p class="m_8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</p>
+					<p class="m_8">Bienvenidos a nuestro centro, un lugar magnífico para desarrollar tus capacidades físicas mediante actividades de riesgo tales como: Escalada, Ciclismo de Montaña, Airsoft etc... Encontrarás las mejoes equipaciones posibles para tu seguridad junto a rebajas y precios extraordinarios. ¿A qué estás esperando para sumergirte en un ámbito diferente?</p>
 					<div class="address">
-				                <p>500 Lorem Ipsum Dolor Sit,</p>
-						   		<p>22-56-2-9 Sit Amet, Lorem,</p>
-						   		<p>USA</p>
-				   		<p>Phone:(00) 222 666 444</p>
-				   		<p>Fax: (000) 000 00 00 0</p>
-				 	 	<p>Email: <span>support[at]snow.com</span></p>
-				   		<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
+				                <p>Carrer del Rei en Jaume I, 2</p>
+						   		<p>46470</p>
+						   		<p>España, Valéncia, Catarroja</p>
+				   		<p>Phone: (+34) 961 22 03 80</p>
+				   		<p>Fax: (375) 789 24 21 1</p>
+				 	 	<p>Web: <span>floridauniversitaria.es</span></p>
+				   		<p>Follow us on: <span>Facebook</span>, <span>Twitter</span>, <span>Instagram</span>, <span>YouTube</span></p>
 				   </div>
 				</div>
 			</div>
@@ -78,12 +92,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-12 contact">
 				  <form method="post" action="contact-post.html">
 					<div class="to">
-                     	<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-					 	<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-					 	<input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
+                     	<input type="text" class="text" value="Nombre:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}">
+					 	<input type="text" class="text" value="Email:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+					 	<input type="text" class="text" value="Asunto:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Asunto';}">
 					</div>
 					<div class="text">
-	                   <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
+	                   <textarea value="Mensaje:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mensaje';}">Mensaje:</textarea>
 	                   <div class="form-submit">
 			           <input name="submit" type="submit" id="submit" value="Submit"><br>
 			           </div>
