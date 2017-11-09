@@ -22,6 +22,17 @@ body a{
 	float:left;
 	width: 59%;
 }
+
+input.formInvalid::-webkit-input-placeholder {
+   color: red;
+}
+
+textarea.change::-webkit-input-placeholder {
+color: red;
+}
+
+
+
 .logo{
 	float:left;
 	margin-right: 2%;
@@ -1257,7 +1268,7 @@ p.m_8{
 .form-submit{
 	float:right;
 }
-.form-submit input[type="submit"] {
+.form-submit input[type="button"] {
 	color: #FFF;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 0.95em;

@@ -4386,8 +4386,17 @@ a.list-group-item.active > .badge,
   max-width: 100%;
 }
 
-.tres {
-  margin-right: -50%;
+.izquierda {
+  margin-left: 30%;
+}
+
+.centro {
+  margin-left: 60%;
+}
+
+.derecha {
+  margin-left: 90%;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {

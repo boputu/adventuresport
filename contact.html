@@ -82,27 +82,72 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						   		<p><b>Location:</b> España, Valéncia, Catarroja</p>
 				   		<p><b>Phone:</b> (+34) 961 22 03 80</p>
 				   		<p><b>Fax:</b> (375) 789 24 21 1</p>
-				 	 	<p><b>Web:</b> <span>floridauniversitaria.es</span></p>
-				   		<p><b>Follow us on:</b> <span>Facebook</span>, <span>Twitter</span>, <span>Instagram</span>, <span>YouTube</span></p>
+				 	 	<p><b>Web:</b> <a href="http://www.floridauniversitaria.es/es-ES/Paginas/FloridaUniversitaria.aspx?Perfil=Florida%20Universitaria">Florida Universitaria</a></p>
+				   		<p><b>Follow us on:</b> <a href="https://www.facebook.com/Adventure-Sports-190485288177369/">Facebook</a>, <a href="https://twitter.com/SportsAdv">Twitter</a>, <a href="https://www.instagram.com/sportsadv/">Instagram</a>, <a href="https://www.youtube.com/watch?v=9PctW-OKx6E">YouTube</a></p>
 				   </div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12 contact">
-				  <form method="post" action="contact-post.html">
+				  <form name="fvalida" method="post" action="">
 					<div class="to">
-                     	<input type="text" class="text" value="Nombre:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}">
-					 	<input type="text" class="text" value="Email:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-					 	<input type="text" class="text" value="Asunto:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Asunto';}">
+                     	<input type="text" id="normalito" class="text" maxlength="100" onclick="normal();" name="nombre" placeholder="Nombre:">
+					 	<input type="text" id="normalito" class="text" name="email" maxlength="30" onclick="normal();" placeholder="Email:">
+					 	<input type="text" id="normalito" class="text" name="asunto" maxlength="50" onclick="normal();" placeholder="Asunto:">
 					</div>
 					<div class="text">
-	                   <textarea value="Mensaje:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mensaje';}">Mensaje:</textarea>
+	                   <textarea name="mensaje" class="text" id="normalito" maxlength="200" onclick="normal();" value="Mensaje:" placeholder="Mensaje:"></textarea>
 	                   <div class="form-submit">
-			           <input name="submit" type="submit" id="submit" value="Submit"><br>
+			           <input type="button" id="submit" value="Enviar" onclick="valida_envia();"><br>
 			           </div>
 	                </div>
 	                <div class="clear"></div>
                    </form>
+<script type="text/javascript">
+
+    function valida_envia(){
+   	//valido el nombre
+   	if (document.fvalida.nombre.value.length==0){
+      	document.fvalida.nombre.placeholder = "Tiene que escribir su nombre";
+        document.fvalida.nombre.className += " formInvalid";
+      	document.fvalida.nombre.style.border = "solid 1px red";
+      	return 0;
+   	}
+
+    if (document.fvalida.email.value.length==0){
+      document.fvalida.email.placeholder = "Tiene que escribir un email valido";
+      document.fvalida.email.className += " formInvalid";
+      document.fvalida.email.style.border = "solid 1px red";
+        return 0;
+    }
+
+
+    if (document.fvalida.asunto.value.length==0){
+      document.fvalida.asunto.placeholder = "Tiene que escribir un asunto";
+      document.fvalida.asunto.className += " formInvalid";
+      document.fvalida.asunto.style.border = "solid 1px red";
+      	return 0;
+   	}
+
+    if (document.fvalida.mensaje.value.length==0){
+      document.fvalida.mensaje.placeholder = "Tiene que escribir un mensaje valido";
+      document.fvalida.mensaje.className += " change";
+      document.fvalida.mensaje.style.border = "solid 1px red";
+        return 0;
+    }
+
+   	//el formulario se envia
+   	alert("Muchas gracias por enviar el formulario");
+   	document.fvalida.submit();
+}
+
+function normal(){
+  var elemento = document.getElementById("normalito");
+  elemento.style.border = "1px solid #DFE0E2";
+}
+
+</script>
+
 			     </div>
 		    </div>
 	     </div>
@@ -114,29 +159,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="row">
 					<div class="col-md-3">
 						<ul class="footer_box">
+              <div class="izquierda">
 							<h4>Products</h4>
 							<li><a href="#">Mens</a></li>
 							<li><a href="#">Womens</a></li>
 							<li><a href="#">Youth</a></li>
+              </div>
 						</ul>
 					</div>
 					<div class="col-md-3">
 						<ul class="footer_box">
+              <div class="centro">
 							<h4>About</h4>
 							<li><a href="#">Careers and internships</a></li>
 							<li><a href="#">Sponserships</a></li>
 							<li><a href="#">team</a></li>
 							<li><a href="#">Catalog Request/Download</a></li>
+              </div>
 						</ul>
 					</div>
 					<div class="col-md-3">
 						<ul class="footer_box">
+              <div class="derecha">
 							<h4>Customer Support</h4>
 							<li><a href="#">Contact Us</a></li>
 							<li><a href="#">Shipping and Order Tracking</a></li>
 							<li><a href="#">Easy Returns</a></li>
 							<li><a href="#">Warranty</a></li>
 							<li><a href="#">Replacement Binding Parts</a></li>
+              </div>
 						</ul>
 					</div>
 					<div class="col-md-3">
