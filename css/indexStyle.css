@@ -32,3 +32,34 @@
   font-size: 80px;
   font-weight: bold;
 }
+
+.listAventure:before{
+  display: block;
+}
+
+.content-top ul{
+  text-align: center;
+  padding: 0;
+}
+
+.content-top li{
+  width: 20%;
+  margin-left: 1%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  text-align: center;
+}
+
+.content-top li img {
+  width: 100%;
+  height: auto;
+}
+
+.textImageAventure{
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  visibility: visible;
+  text-align: center;
+}

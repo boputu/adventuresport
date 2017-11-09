@@ -9,7 +9,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="js/indexJs.js"></script>
 <!--<script src="js/jquery.easydropdown.js"></script>-->
 <!--start slider -->
 <link rel="stylesheet" href="css/fwslider.css" media="all">
@@ -64,52 +63,27 @@
 					<h1>VIVE LA <br />AVENTURA</h1>
        	</div>
        </div>
-			 <script src="js/indexJs.js"></script>
+
        <!--/slider -->
 
 	  <div class="main">
 		<div class="content-top">
-			<h2>snowboards</h2>
-			<p>hendrerit in vulputate velit esse molestie consequat, vel illum dolore</p>
-			<div class="close_but"><i class="close1"> </i></div>
-				<ul id="flexiselDemo3">
-				<li><img src="images/board1.jpg" /></li>
-				<li><img src="images/board2.jpg" /></li>
-				<li><img src="images/board3.jpg" /></li>
-				<li><img src="images/board4.jpg" /></li>
-				<li><img src="images/board5.jpg" /></li>
+			<h2>Aventuras</h2>
+			<p>Disfruta de una gran variedad de aventuras disponibles</p>
+			<div class="close_but"><i class=""> </i></div>
+				<ul id="">
+				<li onmouseover="zoomAdventure(1, 'Escalada')" onmouseout="zoomOutAdventure(1)"><img id="imageAdventure1"  src="images/escaladaIndex.jpg" />
+					<h2 class="textImageAventure" id="textImageAventure1"></h2></li>
+				<li onmouseover="zoomAdventure(2, 'Raftin')" onmouseout="zoomOutAdventure(2)"><img id="imageAdventure2"  src="images/raftinIndex.jpg" />
+					<h2 class="textImageAventure" id="textImageAventure2"></h2></li>
+				<li onmouseover="zoomAdventure(3, 'Ciclismo')" onmouseout="zoomOutAdventure(3)"><img id="imageAdventure3"  src="images/ciclismoIndex.jpg" />
+					<h2 class="textImageAventure" id="textImageAventure3"></h2></li>
+				<li onmouseover="zoomAdventure(4, 'Puenting')" onmouseout="zoomOutAdventure(4)"><img id="imageAdventure4"  src="images/puentingIndex.jpg" />
+					<h2 class="textImageAventure" id="textImageAventure4"></h2></li>
 			</ul>
-		<h3>SnowBoard Extreme Series</h3>
-			<script type="text/javascript">
-		$(window).load(function() {
-			$("#flexiselDemo3").flexisel({
-				visibleItems: 5,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-		    	responsiveBreakpoints: {
-		    		portrait: {
-		    			changePoint:480,
-		    			visibleItems: 1
-		    		},
-		    		landscape: {
-		    			changePoint:640,
-		    			visibleItems: 2
-		    		},
-		    		tablet: {
-		    			changePoint:768,
-		    			visibleItems: 3
-		    		}
-		    	}
-		    });
-
-		});
-		</script>
-		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
 		</div>
 	</div>
+<script src="js/indexJs.js"></script>
 	<div class="content-bottom">
 		<div class="container">
 			<div class="row content_bottom-text">
