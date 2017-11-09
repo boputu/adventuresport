@@ -20,26 +20,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<link rel="stylesheet" href="css/etalage.css">
 					<script src="js/jquery.etalage.min.js"></script>
 				<!-- Include the Etalage files -->
-				<script>
-						jQuery(document).ready(function($){
 
-							$('#etalage').etalage({
-								thumb_image_width: 300,
-								thumb_image_height: 400,
-
-								show_hint: true,
-								click_callback: function(image_anchor, instance_id){
-									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-								}
-							});
-							// This is for the dropdown list example:
-							$('.dropdownlist').change(function(){
-								etalage_show( $(this).find('option:selected').attr('class') );
-							});
-
-					});
-				</script>
-				<!----//details-product-slider--->
+<style media="screen">
+#btnSp{
+	outline: 0;
+}
+#btnSp:hover {
+	opacity: 0.7;
+}
+.boton{
+	font-size:16px;
+	color:white;
+	background:black;
+	border:0px;
+	padding: 4px;
+}
+input:hover{
+ opacity: 0.8;
+}
+</style>
 </head>
 <body>
 	<div class="header">
@@ -77,11 +76,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</div>
 						<!----search-scripts---->
-						<script src="js/classie.js"></script>
+						<!--<script src="js/classie.js"></script>
 						<script src="js/uisearch.js"></script>
 						<script>
 							new UISearch( document.getElementById( 'sb-search' ) );
-						</script>
+						</script>-->
 				    <ul class="icon1 sub-icon1 profile_img">
 					 <li><a class="active-icon c1" href="#"> </a>
 						<ul class="sub-icon1 list">
@@ -113,88 +112,87 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9 single_left">
-				   <div class="single_image">
-					     <ul id="etalage">
-							<li>
-								<a href="optionallink.html">
-									<img class="etalage_thumb_image" src="images/3.jpg" />
-									<img class="etalage_source_image" src="images/3.jpg" />
-								</a>
-							</li>
-							<li>
-								<img class="etalage_thumb_image" src="images/4.jpg" />
-								<img class="etalage_source_image" src="images/4.jpg" />
-							</li>
-							<li>
-								<img class="etalage_thumb_image" src="images/5.jpg" />
-								<img class="etalage_source_image" src="images/5.jpg" />
-							</li>
-							<li>
-								<img class="etalage_thumb_image" src="images/6.jpg" />
-								<img class="etalage_source_image" src="images/6.jpg" />
-							</li>
-							<li>
-								<img class="etalage_thumb_image" src="images/7.jpg" />
-								<img class="etalage_source_image" src="images/7.jpg" />
-							</li>
-							<li>
-								<img class="etalage_thumb_image" src="images/8.jpg" />
-								<img class="etalage_source_image" src="images/8.jpg" />
-							</li>
-							<li>
-								<img class="etalage_thumb_image" src="images/9.jpg" />
-								<img class="etalage_source_image" src="images/9.jpg" />
-							</li>
-						</ul>
-					    </div>
-				        <!-- end product_slider -->
-				        <div class="single_right">
-				        	<h3>hendrerit in vulputate velit </h3>
-				        	<p class="m_10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
-				        	<ul class="options">
-								<h4 class="m_12">Select a Size(cm)</h4>
-								<li><a href="#">151</a></li>
-								<li><a href="#">148</a></li>
-								<li><a href="#">156</a></li>
-								<li><a href="#">145</a></li>
-								<li><a href="#">162(w)</a></li>
-								<li><a href="#">163</a></li>
-							</ul>
-				        	<ul class="product-colors">
-								<h3>available Colors</h3>
-								<li><a class="color1" href="#"><span> </span></a></li>
-								<li><a class="color2" href="#"><span> </span></a></li>
-								<li><a class="color3" href="#"><span> </span></a></li>
-								<li><a class="color4" href="#"><span> </span></a></li>
-								<li><a class="color5" href="#"><span> </span></a></li>
-								<li><a class="color6" href="#"><span> </span></a></li>
-								<div class="clear"> </div>
-							</ul>
-							<div class="btn_form">
-							   <form>
-								 <input type="submit" value="buy now" title="">
-							  </form>
+
+		        <div class="single_right">
+
+							<div id="cont" class="contenedor" style="width:110%" onmouseover="myOverFunction()">
+
+								  <img class="mySlides" src="images/lasportiva.jpg" style="width:75%">
+								  <img class="mySlides" src="images/lasportivacobra2.jpg" style="width:79.7%">
+									
+									<br>
+
+									<div class="contenedor">
+									  <button class="boton" onclick="plusDivs(-1)">&#10094;</button>
+									  <button class="boton" onclick="plusDivs(1)">&#10095;</button>
+									</div>
+
 							</div>
+
+							<script>
+								var slideIndex = 1;
+								showDivs(slideIndex);
+
+								function plusDivs(n) {
+								  showDivs(slideIndex += n);
+								}
+
+								function showDivs(n) {
+								  var i;
+								  var x = document.getElementsByClassName("mySlides");
+								  if (n > x.length) {slideIndex = 1}
+								  if (n < 1) {slideIndex = x.length}
+								  for (i = 0; i < x.length; i++) {
+								     x[i].style.display = "none";
+								  }
+								  x[slideIndex-1].style.display = "block";
+								}
+
+								function myOverFunction() {
+    							document.getElementById("cont").style.opacity=0.8;
+								}
+							</script><br>
+
+							<div class="btn_form">
+								 <input type="submit" value="COMPRAR" class="boton" onclick="location='login.html'">
+							</div>
+
 							<ul class="add-to-links">
-    			              <li><img src="images/wish.png" alt=""><a href="#">Add to wishlist</a></li>
-    			            </ul>
-							<div class="social_buttons">
-								<h4>95 Items</h4>
+		              <li><img src="images/wish.png" alt=""><a href="#">Add to wishlist</a></li>
+	            </ul>
+
+
+							<div id="ViewSocial" style="float:left;">
+								<input type=image id="btnSp" src="images/socialPlus.png" onclick="mostrar()" width="30" height="30">
+							</div>
+
+							<div id="socialButtons" class="social_buttons" style="display:none">
 								<button type="button" class="btn1 btn1-default1 btn1-twitter" onclick="">
-					              <i class="icon-twitter"></i> Tweet
-					            </button>
-					            <button type="button" class="btn1 btn1-default1 btn1-facebook" onclick="">
-					              <i class="icon-facebook"></i> Share
-					            </button>
-					             <button type="button" class="btn1 btn1-default1 btn1-google" onclick="">
-					              <i class="icon-google"></i> Google+
-					            </button>
-					            <button type="button" class="btn1 btn1-default1 btn1-pinterest" onclick="">
-					              <i class="icon-pinterest"></i> Pinterest
-					            </button>
-					        </div>
-				        </div>
-				        <div class="clear"> </div>
+		              <i class="icon-twitter"></i> Tweet
+		            </button>
+		            <button type="button" class="btn1 btn1-default1 btn1-facebook" onclick="">
+		              <i class="icon-facebook"></i> Share
+		            </button>
+		             <button type="button" class="btn1 btn1-default1 btn1-google" onclick="">
+		              <i class="icon-google"></i> Google+
+		            </button>
+		            <button type="button" class="btn1 btn1-default1 btn1-pinterest" onclick="">
+		              <i class="icon-pinterest"></i> Pinterest
+		            </button>
+		        	</div>
+
+							<script>
+								function mostrar() {
+									var displ = document.getElementById('socialButtons');
+									if (displ.style.display == "none")
+											 {displ.style.display = "block"; }
+									else { displ.style.display = "none"; }
+
+								}
+							</script>
+
+
+		        </div>
 				</div>
 				<div class="col-md-3">
 				  <div class="box-info-product">
@@ -306,8 +304,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    			<input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
 				    			<input type="submit" value="Go">
 				    		   </form>
-					        </div>
-							<ul class="social">
+				        </div>
+								<ul class="social">
 							  <li class="facebook"><a href="#"><span> </span></a></li>
 							  <li class="twitter"><a href="#"><span> </span></a></li>
 							  <li class="instagram"><a href="#"><span> </span></a></li>
