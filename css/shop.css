@@ -1,0 +1,33 @@
+h1{
+  text-align: center;
+  font-size: 38px;
+font-style: italic;
+color: #333;
+padding: 10px;
+text-shadow: -1px -1px 0px #101010, 1px 1px 0px #505050;
+}
+
+.aire{
+   float: right;
+   display: table;
+   display: flow;
+   width: 100%;
+   height: 100%;
+   margin-left: 10%;
+
+
+}
+.montana{
+   float: right;
+   display: flow;
+   width: 100%;
+   height: 100%;
+
+}
+
+.agua{
+     display: flow;
+     width: 100%;
+     height: 100%;
+
+}
