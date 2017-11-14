@@ -89,14 +89,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="row">
 				<div class="col-md-12 contact">
-				  <form name="fvalida" method="post" action="">
+				  <form id="miForm" name="fvalida" method="post" action="">
 					<div class="to">
-                     	<input type="text" id="normalito" class="text" maxlength="100" onclick="normal();" name="nombre" placeholder="Nombre:">
-					 	<input type="text" id="normalito" class="text" name="email" maxlength="30" onclick="normal();" placeholder="Email:">
-					 	<input type="text" id="normalito" class="text" name="asunto" maxlength="50" onclick="normal();" placeholder="Asunto:">
+                     	<input type="text" id="normalito" onkeypress="if (event.keyCode == 13) valida_envia()" class="text" maxlength="100" onclick="normal();" name="nombre" placeholder="Nombre:">
+					 	<input type="text" id="normalito" onkeypress="if (event.keyCode == 13) valida_envia()"  class="text" name="email" maxlength="30" onclick="normal();" placeholder="Email:">
+					 	<input type="text" id="normalito" onkeypress="if (event.keyCode == 13) valida_envia()"  class="text" name="asunto" maxlength="50" onclick="normal();" placeholder="Asunto:">
 					</div>
 					<div class="text">
-	                   <textarea name="mensaje" class="text" id="normalito" maxlength="200" onclick="normal();" value="Mensaje:" placeholder="Mensaje:"></textarea>
+	                   <textarea name="mensaje" onkeypress="if (event.keyCode == 13) valida_envia()"  class="text" id="normalito" maxlength="200" onclick="normal();" value="Mensaje:" placeholder="Mensaje:"></textarea>
 	                   <div class="form-submit">
 			           <input type="button" id="submit" value="Enviar" onclick="valida_envia();"><br>
 			           </div>
@@ -138,8 +138,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
    	//el formulario se envia
    	alert("Muchas gracias por enviar el formulario");
-   	document.fvalida.submit();
+    document.getElementById("miForm").reset();
 }
+
 
 function normal(){
   var elemento = document.getElementById("normalito");
