@@ -33,6 +33,15 @@
   font-weight: bold;
 }
 
+.imageContainer h2 {
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  color: #FFFFFF;
+  font-size: 60px;
+  font-weight: bold;
+}
+
 .listAventure:before{
   display: block;
 }
