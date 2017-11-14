@@ -2,7 +2,6 @@
 <html>
 <head>
 <title>Inicio</title>
-<link href="css/indexStyle.css" rel='stylesheet' type='text/css' />
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -12,6 +11,7 @@
 <!--<script src="js/jquery.easydropdown.js"></script>-->
 <!--start slider -->
 <link rel="stylesheet" href="css/fwslider.css" media="all">
+<link href="css/indexStyle.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
 	<div class="header">
@@ -59,7 +59,7 @@
 
 					<input type="image" id="arrowLeft" src="images/arrowRight.png" class="sliderArrowLeft" onclick="nextDiv(-1)" onmouseover="setOpacityLeft()" onmouseout="removeOpacityLeft()"/>
   				<input type="image" id="arrowRight" src="images/arrowLeft.png" class="sliderArrowRight" onclick="nextDiv(1)" onmouseover="setOpacityRight()" onmouseout="removeOpacityRight()"/>
-					<h1>VIVE LA <br />AVENTURA</h1>
+					<h1 class="titleSlider">VIVE LA <br />AVENTURA</h1>
        	</div>
        </div>
 
@@ -83,11 +83,18 @@
 		</div>
 	</div>
 <script src="js/indexJs.js"></script>
+
 <div class="sliderContent">
- <div class="imageContainerCounter">
-	 <p id="text-counter">PROXIMA APERTURA</p>
+ <div class="imageContainer">
+	 <img src="images/slider3.jpg" style="width:100%">
+	 <div class="middle">
+    <h1 class="titleCount">PROXIMA APERTURA</h1>
+    <hr>
+    <p id="textTimer" class="textCount">35 days left</p>
+  </div>
  </div>
 </div>
+
 	<div class="features">
 		<div class="container">
 			<h3 class="m_3">Features</h3>

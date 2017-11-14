@@ -1,4 +1,6 @@
 var imageIndex = 1;
+var dateFinish = new Date("Nov 18, 2017 18:00:00")
+var intervalTime = setInterval(convertDate, 1000);
 showDivs(imageIndex);
 
 //Funcion que pasar un index a showDivs
@@ -60,4 +62,27 @@ function zoomOutAdventure(indexImage) {
   element.style.transform  = "none";
   element.style.opacity = "1";
   elementTitle.style.visibility = "hidden";
+}
+
+function convertDate() {
+  var textTimer = document.getElementById('textTimer');
+
+  //Cogemos el momento actual
+  var now =  new Date().getTime();
+
+  //Calculamos el tiempo entre las dos fechas
+  var timeBetween = dateFinish - now;
+
+  //Si la diferencia es menor que 0 ya habra pasado la fecha
+  if (timeBetween < 0) {
+      clearInterval(x);
+      textTimer.innerHTML = "TIENDA YA DISPONIBLE";
+    } else {
+      //Calculamos dias,horas,minutos y segundos
+      var days = Math.floor(timeBetween / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeBetween % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeBetween % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeBetween % (1000 * 60)) / 1000);
+      textTimer.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    }
 }

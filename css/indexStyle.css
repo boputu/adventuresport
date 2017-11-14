@@ -24,7 +24,7 @@
   height: 10%
 }
 
-.imageContainer h1 {
+.titleSlider {
   position: absolute;
   top: 40%;
   right: 40%;
@@ -64,22 +64,43 @@
   text-align: center;
 }
 
-#text-counter{
-
+.prueba{
+  height: 40%;
+  width: 100%;
 }
 
-.imageContainerCounter{
-  height: 1000px;
-  width: 100%;
-  background-image: url("../images/slider3.jpg");
-  /* Nos aseguramos que la imagen de fondo este centrada vertical y
-    horizontalmente en todo momento */
-  background-position: center center;
-  /* La imagen de fondo no se repite */
-  background-repeat: no-repeat;
-  /* La imagen de fondo se reescala cuando se cambia el ancho de ventana
-     del navegador */
-  background-size: cover;
+.bgimg {
+    height: 100%;
+    background: url('../images/slider3.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
 
-  position: relative;
+.titleCount {
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.textCount {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    color: white;
+    margin: auto;
+    width: 40%;
 }
