@@ -1,32 +1,32 @@
 
 //Funciones dentro de single -------------------------------------------------
 
-var slideIndex = 1;
+var sIndex = 1;
 
 function lanzadera(){
-  //muestra();
-  showDivs(slideIndex);
-  plusDivs(1);
+  mostrarDivs(sIndex);
+  siguiente(1);
+  muestra();
 }
 
-function plusDivs(n) {
+function siguiente(n) {
   /* sumamos o restamos 1 al valor ya definido */
-  showDivs(slideIndex += n);
-  showDivs(slideIndex);
+  mostrarDivs(sIndex += n);
+  mostrarDivs(sIndex);
 }
 
-function showDivs(n) {
+function mostrarDivs(n) {
   /* recogemos el contenedor de imagenes */
   var x = document.getElementsByClassName("mySlides");
   /* si n es mayor que el nª de imagenes, se inicializa a 1 */
-  if (n > x.length) {slideIndex = 1}
+  if (n > x.length) {sIndex = 1}
   /* si n es menor que 1, añadimos la última posición */
-  if (n < 1) {slideIndex = x.length}
+  if (n < 1) {sIndex = x.length}
   /* Recorre todas la imagenes y las oculta */
   for (var i = 0; i < x.length; i++) {
      x[i].style.display = "none";
   }
-  x[slideIndex-1].style.display = "block";
+  x[sIndex-1].style.display = "block";
 }
 
 
@@ -57,8 +57,8 @@ function muestra(){
 
   /* objeto JSON */
   var advent = '{"sports":[' +
-  '{"id":"1","name":"Escalada","precio":"33€","descripcion":"El esfuerzo y las ganas te llevarán a lo más alto","url":"1"},' +
-  '{"id":"2","name":"MTB","precio":"36€","descripcion":"Todo lo que sube, tiene que bajar","url":"1"},' +
+  '{"id":"1","name":"Escalada","precio":"33€","descripcion":"El esfuerzo y las ganas te llevarán a lo más alto","url1":"images/escalada1.jpg","url2":"images/escalada2.jpg"},' +
+  '{"id":"2","name":"MTB","precio":"36€","descripcion":"Todo lo que sube, tiene que bajar","url1":"images/mtb1.jpg","url2":"images/mtb2.jpg"},' +
   '{"id":"3","name":"Airsoft","precio":"45€","descripcion":"Vive experiencias que nunca olvidarás","url":"1"},' +
 
   '{"id":"4","name":"Rafting","precio":"49,99€","descripcion":"No existen los atajos para los lugares que valen la pena","url":"1"},' +
