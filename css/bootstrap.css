@@ -4392,6 +4392,7 @@ a.list-group-item.active > .badge,
 
 .centro {
   margin-left: 60%;
+  width: 100%;
 }
 
 .derecha {

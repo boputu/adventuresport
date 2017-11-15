@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <BODY onLoad="loadedvar=true;">
+  <form name="terms" action="continuar.html" method="get">
+  Acepto: <input type="checkbox" name="agree" value="ON">
+  <input onclick="if (loadedvar) {if (document.terms.agree.checked) {document.terms.submit();} else {window.alert('Debe hacer click para poder continuar.')}} else {window.alert('Por favor espere...')}" type="button" value="Continuar">
+  <input type="button" value="Salir" onclick="document.location.href='/index.html';">
+  </form>
+  </body>
+</html>
