@@ -11,6 +11,7 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link rel="stylesheet" href="css/single.css">
 <script type="text/javascript" src="js/single.js"></script>
+<script type="text/javascript" src="js/shoppingCart.js"></script>
 
 <link rel="stylesheet" href="css/etalage.css">
 
@@ -30,52 +31,25 @@
 						    	<li class="current"><a href="shop.html">Shop</a></li>
 						    	<li><a href="team.html">Team</a></li>
 						    	<li><a href="shop.html">Events</a></li>
-									<li><a href="experiance.html">Galeria</a></li>
-								<li><a href="contact.html">Contact</a></li>
+						    	<li><a href="experiance.html">Galeria</a></li>
+									<li><a href="contact.html">Contact</a></li>
 								<div class="clear"></div>
 							</ul>
 				    </div>
 	    		    <div class="clear"></div>
 	    	    </div>
 	            <div class="header_right">
-
-	    		  <!-- start search-->
-				   <div class="search-box">
-							<div id="sb-search" class="sb-search">
-								<form>
-									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-									<input class="sb-search-submit" type="submit" value="">
-									<span class="sb-icon-search"> </span>
-								</form>
-							</div>
-						</div>
-
-				    <ul class="icon1 sub-icon1 profile_img">
-					 <li><a class="active-icon c1" href="#"> </a>
-						<ul class="sub-icon1 list">
-						  <div class="product_control_buttons">
-						  	<a href="#"><img src="images/edit.png" alt=""/></a>
-						  		<a href="#"><img src="images/close_edit.png" alt=""/></a>
-						  </div>
-						   <div class="clear"></div>
-						  <li class="list_img"><img src="images/1.jpg" alt=""/></li>
-						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
-                          $12.00</span></li>
-						  <div class="login_buttons">
-							 <div class="check_button"><a href="checkout.html">Check out</a></div>
-							 <div class="login_button"><a href="login.html">Login</a></div>
-							 <div class="clear"></div>
-						  </div>
-						  <div class="clear"></div>
-						</ul>
-					 </li>
-				   </ul>
-		        <div class="clear"></div>
+								<ul class="social">
+									<li class="facebook"><a href="https://www.facebook.com/Adventure-Sports-190485288177369/"><span> </span></a></li>
+									<li class="twitter"><a href="https://twitter.com/SportsAdv"><span> </span></a></li>
+									<li class="instagram"><a href="https://www.instagram.com/sportsadv/"><span> </span></a></li>
+									<li class="youtube"><a href="https://www.youtube.com/watch?v=9PctW-OKx6E"><span> </span></a></li>
+									</ul>
 	       </div>
 	      </div>
 		 </div>
 	    </div>
-	  </div>
+	</div>
      <div class="main">
       <div class="shop_top">
 		<div class="container">
@@ -95,7 +69,7 @@
 									<div class="contenedor">
 									  <button class="boton" onclick="siguiente(-1)">&#10094;</button>
 									  <button class="boton" style="margin-right:380px" onclick="siguiente(1)">&#10095;</button>
-										<input type="submit" value="COMPRAR" class="boton" onclick="location='login.html'">
+										<input type="submit" value="COMPRAR" class="boton" onclick="location='checkout.html'">
 									</div>
 
 							</div><br>
@@ -128,7 +102,7 @@
 					<p id="precio" class="price2">33€</p>
 					       <ul class="prosuct-qty">
 								<span>Cantidad:</span>
-								<select>
+								<select id="selectQuantity">
 									<option>1</option>
 									<option>2</option>
 									<option>3</option>
@@ -137,7 +111,7 @@
 									<option>6</option>
 								</select>
 							</ul>
-							<button type="submit" name="Submit" class="exclusive" onclick="location='login.html'">
+							<button type="submit" name="Submit" class="exclusive" onclick="addShoppingCart()">
 							   <span>Añadir</span>
 							</button>
 				   </div>
@@ -150,52 +124,6 @@
 			   	<h4>Descripción</h4>
 			   	<p id="descr"><i>El esfuerzo y las ganas te llevarán a lo más alto</i></p>
 			</div>
-
-	<!--  <div class="row">
-				<h4 class="m_11">Related Products in the same Category</h4>
-				<div class="col-md-4 product1">
-					<img src="images/s1.jpg" class="img-responsive" alt=""/>
-					<div class="shop_desc"><a href="single.html">
-						</a><h3><a href="single.html"></a><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="reducedfrom">$66.00</span>
-						<span class="actual">$12.00</span><br>
-						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
-							<li class="shop_btn"><a href="#">Read More</a></li>
-							<div class="clear"> </div>
-					    </ul>
-				    </div>
-				</div>
-				<div class="col-md-4 product1">
-					<img src="images/s2.jpg" class="img-responsive" alt=""/>
-					<div class="shop_desc"><a href="single.html">
-						</a><h3><a href="single.html"></a><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="reducedfrom">$66.00</span>
-						<span class="actual">$12.00</span><br>
-						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
-							<li class="shop_btn"><a href="#">Read More</a></li>
-							<div class="clear"> </div>
-					    </ul>
-				    </div>
-				</div>
-				<div class="col-md-4">
-					<img src="images/s3.jpg" class="img-responsive" alt=""/>
-					<div class="shop_desc"><a href="single.html">
-						</a><h3><a href="single.html"></a><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="reducedfrom">$66.00</span>
-						<span class="actual">$12.00</span><br>
-						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
-							<li class="shop_btn"><a href="#">Read More</a></li>
-							<div class="clear"> </div>
-					    </ul>
-				    </div>
-				</div>
-			</div> -->
 
 	     </div>
 	   </div>
