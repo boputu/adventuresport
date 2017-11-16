@@ -1,10 +1,10 @@
 
 /* botón social */
-#btnSp{
+#btnSocial{
 	outline: 0;
 	margin-right: 10px;
 }
-#btnSp:hover {
+#btnSocial:hover {
 	opacity: 0.7;
 }
 
