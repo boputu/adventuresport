@@ -393,6 +393,7 @@ li.list_desc h4 a:hover{
 	margin:2% 0;
 }
 .sub-icon1.list{
+	list-style-type: none; 
 	padding:20px;
 }
 .sub-icon1 ul li p a{
