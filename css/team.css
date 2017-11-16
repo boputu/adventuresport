@@ -1,0 +1,108 @@
+.stage {
+	list-style: none;
+	padding: 0;
+}
+
+.scene {
+	width: 200px;
+	height: 270px;
+	margin: 14px;
+	float: left;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+}
+
+.movie .poster, 
+.movie .info {
+	position: absolute;
+	width: 200px;
+	height: 270px;
+	background-color: #fff;
+	backface-visibility: hidden;
+}
+
+.movie .poster  {
+	transform: translateZ(100px);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.movie .info {
+	transform: rotateY(90deg) translateZ(100px);
+	border: 1px solid #B8B5B5;
+	font-size: 0.75em;
+}
+
+.info header {
+	color: #FFF;
+	padding: 7px 10px;
+	font-weight: bold;
+	height: 168px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	text-shadow: 0px 1px 1px rgba(0,0,0,1);
+}
+
+.info header h1 {
+	margin: 0 0 2px;
+	font-size: 1.4em;
+}
+
+.info header .rating {
+	border: 1px solid #FFF;
+	padding: 0px 3px;
+}
+
+.info p {
+	padding: 1.2em 1.4em;
+	margin: 2px 0 0;
+	font-weight: 700;
+	color: #666;
+	line-height: 1.4em;
+	border-top: 10px solid #555;
+}
+
+/*	Imagenes */
+
+.scene:nth-child(1) .movie .poster {
+  background-image: url(../images/profeSnow.jpg);
+}
+
+.scene:nth-child(2) .poster {
+  background-image: url(../images/profeEscalada.jpg);
+}
+
+.scene:nth-child(3) .poster {
+  background-image: url(../images/profeBuceo.jpg);
+}
+
+.scene:nth-child(4) .poster {
+	background-image: url(../images/profesKayak.jpg);
+}
+
+.scene:nth-child(5) .poster {
+	background-image: url(../images/alberto_contador.jpg);
+}
+
+.scene:nth-child(1) .info header {
+	background-image: url(../images/e1.jpg);
+}
+
+.scene:nth-child(2) .info header {
+	background-image: url(../images/escalada.jpg);
+}
+
+.scene:nth-child(3) .info header {
+	background-image: url(../images/buceo.jpg);
+}
+
+.scene:nth-child(4) .info header {
+	background-image: url(../images/kayak.jpg);
+}
+
+.scene:nth-child(5) .info header {
+	background-image: url(../images/ciclismo.jpg);
+}
+
+
