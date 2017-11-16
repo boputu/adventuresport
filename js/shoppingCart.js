@@ -31,38 +31,64 @@ function addShoppingCart() {
 //Funcion que creara los objetos del carrito
 function showShoppingCart() {
   var cart = JSON.parse(localStorage.getItem('shoppingCart'));
-  for (var i = 0; i < cart.length; i++) {
-
-    var ul = document.createElement("ul");
+  for (let i = 0; i < cart.length; i++) {
+    let ul = document.createElement("ul");
+    ul.setAttribute("id", "ul"+i);
     ul.className = "sub-icon1 list";
-    var divClear = document.createElement("div");
+    let divClear = document.createElement("div");
     divClear.className = "clear";
     ul.appendChild(divClear);
 
-    var liImg = document.createElement("li");
+    let liImg = document.createElement("li");
     liImg.className = "list_img";
-    var img = document.createElement("img");
+    let img = document.createElement("img");
     img.style.height = '100px';
     img.style.width = '100px';
     img.src = cart[i].image;
     liImg.appendChild(img);
     ul.appendChild(liImg);
 
-    var liDesc = document.createElement("li");
+    let liDesc = document.createElement("li");
     liDesc.className = "list_desc";
-    var h4 = document.createElement("h4");
+    let h4 = document.createElement("h4");
     h4.innerHTML = cart[i].name;
     liDesc.appendChild(h4);
-    var span = document.createElement("span");
+    let span = document.createElement("span");
     span.className = "actual";
     span.innerHTML = cart[i].quantity + " x " + cart[i].price;
     liDesc.appendChild(span);
     ul.appendChild(liDesc);
 
-    var divClear2 = document.createElement("div");
+    let liButtons = document.createElement("li");
+    let divButtons = document.createElement("div");
+    divButtons.className = "product_control_buttons";
+    let imgRemove = document.createElement("img");
+    imgRemove.style.height = '30px';
+    imgRemove.style.width = '30px';
+    imgRemove.src = "images/close_edit.png";
+
+    divButtons.appendChild(imgRemove);
+    liButtons.appendChild(divButtons);
+    ul.appendChild(liButtons);
+
+    let divClear2 = document.createElement("div");
     divClear2.className = "clear";
     ul.appendChild(divClear2);
 
-    document.getElementById("containerCheckout").appendChild(ul);
+    let containerCheckout = document.getElementById("containerCheckout");
+    containerCheckout.appendChild(ul);
+    imgRemove.onclick = function() {
+      removeProduct(i);
+    };
     }
+}
+
+//Funcion que eliminara un producto del localStorage y de la pantalla
+function removeProduct(indexProduct) {
+    var cart = JSON.parse(localStorage.getItem('shoppingCart'));
+    cart.splice(indexProduct,1);
+    localStorage.setItem('shoppingCart', JSON.stringify(cart));
+    var ulRemove = document.getElementById("ul"+indexProduct);
+    var parent = document.getElementById("containerCheckout");
+    parent.removeChild(ulRemove);
 }
