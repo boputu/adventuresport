@@ -31,3 +31,11 @@ text-shadow: -1px -1px 0px #101010, 1px 1px 0px #505050;
      height: 100%;
 
 }
+
+#textTimer {
+  border: 1px solid #ffc7a0;
+  display: inline-block;
+line-height: 18px;
+padding: 0 8px;
+color: #ed5f00;
+}
