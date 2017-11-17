@@ -75,8 +75,8 @@ function convertDate() {
 
   //Si la diferencia es menor que 0 ya habra pasado la fecha
   if (timeBetween < 0) {
-      clearInterval(x);
       textTimer.innerHTML = "TIENDA YA DISPONIBLE";
+      clearInterval(x);
     } else {
       //Calculamos dias,horas,minutos y segundos
       var days = Math.floor(timeBetween / (1000 * 60 * 60 * 24));
